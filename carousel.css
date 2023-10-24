@@ -1,0 +1,21 @@
+/* Carousel Slide */
+.owl-carousel .item {
+    position: relative;
+    text-align: center;
+    padding: 20px; /* Ruang di sekitar gambar */
+    transition: transform 0.5s ease-in-out; /* Animasi saat mengganti slide */
+    overflow: hidden; /* Menghindari overflow dari gambar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-carousel .item img {
+    max-width: 40%;
+    /*Ukurangambarmaksimum(80%darilebarslide)*/max-height: 50vh;
+    /*Tinggimaksimumgambar(80%daritinggiviewport)*/border-radius: 20px;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+     /* Animasi saat mengganti slide */
+}

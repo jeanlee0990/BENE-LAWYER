@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #222;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 12px 20px;
+}
+
+.navbar a:hover {
+    background-color: #f39c12;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    margin-right: 10px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.bene-lawyer {
+    font-size: 28px;
+    color: #f39c12;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-right: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.menu-toggle.active .bar:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222;
+        width: 200px;
+        z-index: 1;
+    }
+
+    .navbar.responsive .menu-items.show {
+        display: flex;
+    }
+
+    .navbar.responsive .menu-toggle.active .bar:first-child {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar.responsive .menu-toggle.active .bar:last-child {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

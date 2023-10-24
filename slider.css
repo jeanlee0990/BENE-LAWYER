@@ -1,0 +1,74 @@
+/* CSS for the slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-align: center;
+    position: relative;
+    margin-right: 20px; /* Jarak antara gambar */
+}
+
+.slide:last-child {
+    margin-right: 0; /* Hapus jarak kanan pada elemen terakhir */
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Sudut elemen yang dibulatkan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+/* CSS for the slider controls */
+.slider-controls {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px; /* Jarak antara slider dan tombol */
+}
+
+.prev,
+.next {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Sudut tombol yang dibulatkan */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #555; /* Warna tombol saat dihover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .prev,
+    .next {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .slider-container {
+        flex-wrap: wrap; /* Perbarui wrap pada perangkat kecil */
+        justify-content: center; /* Pusatkan gambar dan tombol di perangkat kecil */
+    }
+
+    .slide {
+        flex: 0 0 calc(50% - 10px); /* Perbarui lebar gambar pada perangkat kecil */
+        margin: 5px; /* Jarak antara gambar pada perangkat kecil */
+    }
+}

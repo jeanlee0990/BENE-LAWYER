@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="layanan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Bene Lawyer</title>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" id="logo-icon">
+        </div>
+        <span class="bene-lawyer">BENE LAWYER</span>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-items"> 
+            <a href="index.html">Home</a>
+            <a href="tentangkami.html">Tentang Kami</a>
+            <a href="layanan.html">Layanan</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+    </div>
+
+    <main>
+        <section id="layanan">
+            <h2>Layanan Kami</h2>
+            <div class="layanan-container">
+                <div class="layanan-card">
+                    <div class="layanan-icon">
+                        <!-- Gambar ikon atau simbol untuk layanan ini -->
+                    </div>
+                    <div class="layanan-info">
+                        <img src="konsultasihukum.jpg" alt="konsultasi hukum">
+                        <h3>Konsultasi Hukum</h3>
+                        <p>
+                            Kami memberikan konsultasi hukum yang komprehensif untuk membantu Anda memahami hak dan kewajiban hukum Anda dalam berbagai situasi.
+                        </p>
+                    </div>
+                </div>
+                <div class="layanan-card">
+                    <div class="layanan-icon">
+                        <!-- Gambar ikon atau simbol untuk layanan ini -->
+                    </div>
+                    <div class="layanan-info">
+                        <img src="pembelaanhukum.jpg" alt="pembelaan hukum">
+                        <h3>Pembelaan Hukum</h3>
+                        <p>
+                            Tim ahli kami siap membela hak-hak Anda di pengadilan dengan dedikasi tinggi dan pengetahuan yang mendalam dalam hukum.
+                        </p>
+                    </div>
+                </div>
+                <div class="layanan-card">
+                    <div class="layanan-icon">
+                        <!-- Gambar ikon atau simbol untuk layanan ini -->
+                    </div>
+                    <div class="layanan-info">
+                        <img src="litigasi.jpg" alt="litigasi">
+                        <h3>Litigasi</h3>
+                        <p>
+                            Kami memiliki pengalaman dalam menangani litigasi yang kompleks dan menawarkan solusi hukum yang efektif bagi klien kami.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tambahkan card-card lainnya untuk setiap layanan di sini -->
+
+                <div class="layanan-card">
+                    <div class="layanan-icon">
+                        <!-- Gambar ikon atau simbol untuk layanan ini -->
+                    </div>
+                    <div class="layanan-info">
+                        <img src="hukumlingukungan.jpg" alt="hukum lingkungan">
+                        <h3>Hukum Lingkungan</h3>
+                        <p>
+                            Berkontribusi pada pelestarian lingkungan dengan pengetahuan hukum kami.
+                        </p>
+                    </div>
+                </div>
+                <div class="layanan-card">
+                    <div class="layanan-icon">
+                        <!-- Gambar ikon atau simbol untuk layanan ini -->
+                    </div>
+                    <div class="layanan-info">
+                        <img src="penasihatbisnis.jpg" alt="penasihat bisnis">
+                        <h3>Penasihat Bisnis</h3>
+                        <p>
+                            Bantu bisnis Anda menghadapi tantangan hukum dan berkembang secara berkelanjutan.
+                        </p>
+                    </div>
+                </div>
+                <div class="layanan-card">
+                    <div class="layanan-icon">
+                        <!-- Gambar ikon atau simbol untuk layanan ini -->
+                    </div>
+                    <div class="layanan-info">
+                        <img src="hukumproperti.jpg" alt="hukum properti">
+                        <h3>Hukum Properti</h3>
+                        <br><br>
+                        <p>
+                            Ahli dalam permasalahan hukum properti dan real estate.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tambahkan card-card lainnya untuk setiap layanan di sini -->
+
+            </div>
+        </section>
+        <div class="top" onclick="goToTop()">✋</div>
+    <script>
+        const goToTop = () => {
+        return location.href=""
+    }
+    </script>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            var menuToggle = document.getElementById("menu-toggle");
+            var menuItems = document.querySelector(".menu-items");
+
+            menuToggle.classList.toggle("active");
+            if (menuToggle.classList.contains("active")) {
+                menuItems.style.display = "flex";
+                menuToggle.innerHTML = "&#10006;"; 
+            } else {
+                menuItems.style.display = "none";
+                menuToggle.innerHTML = "&#9776;"; 
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Footer Logo">
+            </div>
+            <div class="footer-info">
+                <h3>Kontak Kami</h3>
+                <p>Alamat: Manggarai Barat, Labuan Bajo</p>
+                <p>Email: benediktusjanur@lawyer.com</p>
+                <p>Telepon: (0821)-4480-7749</p>
+            </div>
+            <div class="footer-social">
+                <h3>Sosial Media</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

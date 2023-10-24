@@ -1,0 +1,43 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling - You can use your existing CSS for the navbar */
+
+/* Container for content */
+.container {
+    max-width: 1400px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* Content styling */
+.content {
+    margin-bottom: 40px;
+}
+   
+.image {
+    border-radius: 50px;
+    max-width: 100%;
+    height: auto;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.text-content {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Footer styling - You can use your existing CSS for the footer */

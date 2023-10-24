@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="tentangkami.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Bene Lawyer</title>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" id="logo-icon">
+        </div>
+        <span class="bene-lawyer">BENE LAWYER</span>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-items"> 
+            <a href="index.html">Home</a>
+            <a href="tentangkami.html">Tentang Kami</a>
+            <a href="layanan.html">Layanan</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="bene.jpg" alt="Gambar Pengacara" class="image">
+            <div class="text-content">
+                <h2>Kami adalah sebuah kumpulan pengacara yang mengedepankan keahlian, dedikasi, dan komitmen dalam memberikan perlindungan hukum terbaik bagi Anda.</h2>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="text-content">
+                <p>Kami memahami betapa kompleksnya dunia hukum, dan itulah mengapa kami hadir di sini: untuk menjadi mitra yang handal dan terpercaya dalam setiap permasalahan hukum Anda. Baik Anda menghadapi masalah keluarga yang rumit, permasalahan bisnis yang menantang, atau perjuangan dalam sistem peradilan yang kompleks, kami siap membantu Anda melewati setiap langkah dengan penuh keyakinan.</p>
+                <p>Terimalah kami sebagai mitra hukum Anda, dan bersama-sama kita akan meraih solusi hukum yang paling baik untuk Anda.</p>
+            </div>
+        </div>
+    </div>
+    <div class="top" onclick="goToTop()">✋</div>
+    <script>
+        const goToTop = () => {
+        return location.href=""
+    }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            var menuToggle = document.getElementById("menu-toggle");
+            var menuItems = document.querySelector(".menu-items");
+
+            menuToggle.classList.toggle("active");
+            if (menuToggle.classList.contains("active")) {
+                menuItems.style.display = "flex";
+                menuToggle.innerHTML = "&#10006;"; 
+            } else {
+                menuItems.style.display = "none";
+                menuToggle.innerHTML = "&#9776;"; 
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Footer Logo">
+            </div>
+            <div class="footer-info">
+                <h3>Kontak Kami</h3>
+                <p>Alamat: Manggarai Barat, Labuan Bajo</p>
+                <p>Email: benediktusjanur@lawyer.com</p>
+                <p>Telepon: (0821)-4480-7749  </p>
+            </div>
+            <div class="footer-social">
+                <h3>Sosial Media</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

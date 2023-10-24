@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="content2.css">
+    <link rel="stylesheet" href="kontak.css">
+    <title>Bene Lawyer</title>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" id="logo-icon">
+        </div>
+        <span class="bene-lawyer">BENE LAWYER</span>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-items"> 
+            <a href="index.html">Home</a>
+            <a href="tentangkami.html">Tentang Kami</a>
+            <a href="layanan.html">Layanan</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+    </div>
+
+    <!-- ========================= contact style-6 start ========================= -->
+    <section id="contact" class="contact-section contact-style-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" action="https://formspree.io/f/xbjvpovj" method="POST">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="single-input">
+                                        <label for="name">Nama</label>
+                                        <input type="text" id="name" name="name" class="form-input" placeholder="Nama">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-input">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" class="form-input" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-input">
+                                        <label for="number">Handphone</label>
+                                        <input type="text" id="number" name="number" class="form-input" placeholder="Handphone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-input">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-input">
+                                        <label for="message">Pesan</label>
+                                        <textarea name="message" id="message" class="form-input" placeholder="Pesan" rows="6"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-button">
+                                        <button type="submit" class="button radius-10">Kirim</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="top" onclick="goToTop()">✋</div>
+    <script>
+        const goToTop = () => {
+        return location.href=""
+    }
+    </script>
+    <!-- ========================= contact style-6 end ========================= -->
+
+
+    <script>
+        function toggleMenu() {
+            var menuToggle = document.getElementById("menu-toggle");
+            var menuItems = document.querySelector(".menu-items");
+    
+            menuToggle.classList.toggle("active");
+            if (menuToggle.classList.contains("active")) {
+                menuItems.style.display = "flex";
+                menuToggle.innerHTML = "&#10006;"; 
+            } else {
+                menuItems.style.display = "none";
+                menuToggle.innerHTML = "&#9776;"; 
+            }
+        }
+    </script>
+    
+     
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="Footer Logo">
+            </div>
+            <div class="footer-info">
+                <h3>Kontak Kami</h3>
+                <p>Alamat: Manggarai Barat, Labuan Bajo</p>
+                <p>Email: benediktusjanur@lawyer.com</p>
+                <p>Telepon: (0821)-4480-7749  </p>
+            </div>
+            <div class="footer-social">
+                <h3>Sosial Media</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="kontak.js"></script>
+</body>
+</html>

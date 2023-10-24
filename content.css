@@ -1,0 +1,48 @@
+/* CSS for the content section */
+.content {
+    background-color: #f8f8f8; /* Latar belakang yang hampir putih */
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #e5e5e5; /* Garis tipis dengan warna lembut */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih menonjol */
+    border-radius: 8px; /* Sudut elemen yang dibulatkan */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Lobster', cursive; /* Menggunakan font Lobster yang memiliki gaya tulisan tangan */
+    font-size: 32px; /* Judul yang lebih besar */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Hover effect on content */
+.content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    background-color: wheat;
+    border-radius: 20px;
+}

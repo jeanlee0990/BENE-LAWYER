@@ -1,0 +1,118 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the main content */
+main {
+    padding: 5rem;
+}
+
+section#layanan {
+    background-color: #222;
+    padding: 4rem 2rem; /* Padding 4rem atas/bawah dan 2rem kiri/kanan */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+section#layanan h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f39c12;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.layanan-container {
+    display: flex;
+    flex-wrap: wrap; /* Mengatur agar card dapat melompat ke baris berikutnya jika lebar layar terlalu kecil */
+    justify-content: space-evenly; /* Mengatur agar card berada secara horizontal */
+    align-items: stretch; /* Mengatur agar card memiliki tinggi yang sama */
+}
+
+/* Perubahan pada .layanan-card */
+.layanan-card {
+    flex: 1; /* Memberikan tinggi yang sama pada semua card */
+    flex-basis: calc(33.33% - 20px); /* Lebar card disesuaikan agar tiga card muat dalam satu baris */
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    margin: 10px; /* Tambahkan margin pada semua sisi card */
+}
+
+.layanan-card:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.layanan-icon {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+.layanan-info {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Perubahan pada .layanan-info img untuk mengatur ukuran gambar secara konsisten */
+.layanan-info img {
+    border-radius: 20px;
+    width: 250px; /* Ubah sesuai dengan lebar yang diinginkan */
+    height: 250px; /* Ubah sesuai dengan tinggi yang diinginkan */
+}
+
+.layanan-info h3 {
+    font-size: 1.5rem;
+    color: #1e2a38;
+    margin-bottom: 0.5rem;
+}
+
+.layanan-info p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Media queries untuk perangkat dengan lebar layar lebih kecil dari 768px */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem; /* Mengurangi padding pada layar kecil */
+    }
+
+    section#layanan {
+        padding: 2rem 1rem; /* Mengurangi padding pada layar kecil */
+    }
+
+    .layanan-container {
+        flex-direction: column; /* Mengubah kartu menjadi tata letak vertikal */
+        align-items: center; /* Mengatur agar card berada di tengah vertikal */
+    }
+
+    /* Perubahan pada .layanan-card dalam mode responsif */
+    .layanan-card {
+        flex-basis: calc(50% - 20px); /* Dua kartu per baris pada layar kecil */
+        margin: 10px; /* Tambahkan margin pada semua sisi card */
+        padding: 1rem;
+    }
+
+    .layanan-info img {
+        width: 100%; /* Gambar mengisi lebar wadah pada layar kecil */
+        height: auto; /* Menjaga rasio aspek gambar */
+        max-width: 300px; /* Batas maksimum lebar gambar */
+    }
+
+    .layanan-info h3 {
+        font-size: 1.2rem; /* Ukuran font yang lebih kecil */
+    }
+
+    .layanan-info p {
+        font-size: 1rem; /* Ukuran font yang lebih kecil */
+    }
+}
